@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meme_Topia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body class="home">
+<nav>
+    <div class="nav-wrapper">
+        <a href="" class="brand-logo">
+            <div class="container">Meme_Topia</div>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="https://youtu.be/dQw4w9WgXcQ">FeedBack</a></li>
+            <li><a href="Uploader.html">Create Meme</a></li>
+            <li><a href="https://youtu.be/sAn7baRbhx4">Click Me</a></li>
+            <li><i class="material-icons dp 48" style="color: white" id="theme">brightness_high</i></li>
+        </ul>
+    </div>
+</nav>
+{% for post in posts %}
+    <div class="container">
+        <div class="card">
+            <div class="card-image">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="{{ post.Post.url }}" alt="Post">
+                </div>
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{ post.Title }}<i
+                        class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{ post.Title }}<i
+                        class="material-icons right">close</i></span>
+                <h5><u>Comments:</u></h5>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+<script>
+    var theme = document.getElementById("theme");
+    theme.onclick = function () {
+        document.body.classList.toggle("light-theme");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.card {
+    height: auto;
+    max-width: 75%;
+    overflow: hidden;
+    background-color: gray;
+}
+
+.card-image {
+    height: auto;
+    max-width: 75%;
+    overflow: hidden;
+}
+.container{
+    alignment: center;
+}
+.nav-wrapper{
+    background-color: navy;
+}
+:root{
+    --primary-color: black;
+    --secondary-color:navy;
+}
+.light-theme{
+    --primary-color: white;
+    --secondary-color:navy;
+}
+.home{
+    background-color: var(--primary-color);
+}
+.sun{
+    ;
+}
