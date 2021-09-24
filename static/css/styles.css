@@ -3,6 +3,10 @@
     max-width: 75%;
     overflow: hidden;
     background-color: gray;
+    border-bottom: 5px solid navy;
+    border-right: 5px solid navy;
+    border-left: 5px solid navy;
+    border-top: 5px solid navy;
 }
 
 .card-image {
