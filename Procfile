@@ -1,1 +1,1 @@
-web: gunicorn Meme_Topia.wsgi
+web: gunicorn Meme_Topia.wsgi --log-file -
