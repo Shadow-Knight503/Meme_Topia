@@ -1,0 +1,1 @@
+web: gunicorn Meme_Topia.wsgi
